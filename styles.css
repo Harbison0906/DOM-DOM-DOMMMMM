@@ -1,11 +1,17 @@
+button {
+  display: block;
+}
+
 .square {
   background-color: black;
-  /* display: inline; */
-  width: 50vw;
-  height: 50vw;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 1em;
 }
 
 h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
+  text-align: center
 }
