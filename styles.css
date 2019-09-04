@@ -10,8 +10,14 @@ button {
   margin: 1em;
 }
 
+/* square:hover + h2 {
+  display: block;
+} */
+
 h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: whitesmoke;
-  text-align: center
+  text-align: center;
+  line-height: 50px;
+  /* display: none; */
 }
