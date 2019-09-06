@@ -43,6 +43,27 @@ window.addEventListener('DOMContentLoaded', function () {
       div.style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)];
 
     });
+
+    div.addEventListener('dblclick', function () {
+      // console.log(div.id);
+      // console.log(div.previousSibling);
+      if (div.id % 2 === 0) {
+        if (div.nextSibling === null) {
+          alert('There is nothing after this square');
+        } else {
+          flexDiv.removeChild(div.nextSibling);
+        }
+        console.log('even');
+      } else {
+        if (div.previousSibling === null) {
+          alert('There is nothing before this square');
+        } else {
+          console.log('odd');
+          flexDiv.removeChild(div.previousSibling);
+        }
+      }
+    })
+
   });
 
 });
