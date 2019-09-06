@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function () {
+// creating a button
 
   let btn = document.createElement('button');
   let btnText = document.createTextNode('Add Square');
@@ -6,12 +6,16 @@ window.addEventListener('DOMContentLoaded', function () {
   btn.appendChild(btnText);
   document.body.appendChild(btn);
 
+  // creating a flexbox container 
+
   let flexDiv = document.createElement('div');
   flexDiv.classList.add('container');
   document.body.appendChild(flexDiv);
 
 
   let counter = 1;
+
+// click button to add a square 
 
   btn.addEventListener('click', function () {
     let div = document.createElement('div');
@@ -22,6 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
     flexDiv.appendChild(div);
 
 
+    // make id of square appear when hovering over square 
 
     div.addEventListener('mouseenter', function () {
       let h2 = document.createElement('h2');
@@ -36,6 +41,8 @@ window.addEventListener('DOMContentLoaded', function () {
       elem.parentNode.removeChild(elem);
     })
 
+    // change backgroundcolor of square when square is clicked
+
     let colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
       '#E6B333', '#3366E6', '#999966'];
 
@@ -43,6 +50,8 @@ window.addEventListener('DOMContentLoaded', function () {
       div.style.backgroundColor = colorArray[Math.floor(Math.random() * colorArray.length)];
 
     });
+
+    // remove square after even id is dbl clicked or remove square before odd id is dbl clicked
 
     div.addEventListener('dblclick', function () {
       // console.log(div.id);
@@ -66,4 +75,4 @@ window.addEventListener('DOMContentLoaded', function () {
 
   });
 
-});
+
